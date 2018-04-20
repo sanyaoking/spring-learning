@@ -15,7 +15,6 @@ public class SchemaTest {
     public void testSimple() {
         String configPath = "com/brianway/learning/spring/aop/schema/beans-schema.xml";
         ApplicationContext context = new ClassPathXmlApplicationContext(configPath);
-
         Waiter naiveWaiter = (Waiter) context.getBean("naiveWaiter");
         Waiter naughtyWaiter = (Waiter) context.getBean("naughtyWaiter");
         naiveWaiter.greetTo("Brian");
